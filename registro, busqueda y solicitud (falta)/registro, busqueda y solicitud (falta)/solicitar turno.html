@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Formulario de Solicitud de Turno</title>
+    <style>
+/* Estilos generales */
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2f5f8c;
+        }
+
+        /* Header icons */
+        .header-icons {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .header-icons a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            margin-left: 30px;
+        }
+
+        .header-icons a:hover {
+            color: #0d47a1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Top bar */
+        .top-bar {
+            background-color: #0d47a1;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .top-bar .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-right: 0px;
+}
+
+        .right-align {
+            display: flex;
+            align-items: center;
+        }
+
+        .phone-number {
+            margin: 0;
+            font-size: 16px;
+            margin-left: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .social-icons i {
+            margin-left: 15px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .social-icons i:first-of-type {
+            margin-left: 0;
+        }
+
+        .social-icons i:hover {
+            color: #fff;
+        }
+
+           /* Navbar */
+           .navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #ececec;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        
+
+        header .navbar .container {
+            display: flex;
+            align-items: center; /* Alinea verticalmente los elementos dentro del contenedor */
+            justify-content: space-between; /* Distribuye el espacio entre los elementos del contenedor */
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            position: absolute;
+            left: 0;
+            margin-bottom: 100px;
+        }
+        
+        .navbar .logo img {
+            height: 50px;
+            width: 150px;
+            margin-left: 120px;  /* Asegura que no haya margen */
+            padding-left: 0;  /* Elimina cualquier padding */
+        }
+        .nav-menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            margin-right: 30px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .nav-menu a:hover {
+            color: #0d47a1;
+        }
+
+        /* Barra vertical */
+        .vertical-line {
+            width: 1px;
+            height: 30px;
+            background-color: #333;
+            margin: 0 15px;
+        }
+
+        /* Estilo para el contenedor de los íconos */
+        .header-icons .vertical-line {
+            height: 20px;
+            margin: 0 15px;
+        }
+
+        .form-container {
+            display: flex;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: left;
+            flex-direction: column;
+            max-width: 1200px;
+            width: 100%;
+            margin-left: 330px;
+            background-color: #31628F;
+        }
+
+        fieldset {
+            border: none;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .left-section,
+        .right-section {
+            width: 48%;
+            margin: 0;
+        }
+
+        .right-section {
+            text-align: right;
+            margin-left: auto;
+        }
+
+        .left-section {
+            margin-right: auto;
+        }
+
+        label {
+            display: block;
+            color: #fff;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 25px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background: #fff;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        h6, h1, h3, h2 {
+            color: white;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .disclaimer-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        
+
+        .center-text {
+            text-align: center;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center; /* Centramos los botones */
+            gap: 50px; /* Ajustamos el espacio entre los botones */
+        }
+
+        button {
+            color: #fff;
+            padding: 12px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 25px;
+            min-width: 300px; /* Ajustamos el tamaño mínimo de los botones */
+        }
+
+        .soli {
+            background-color: #376c9e;
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        #solicitar-turno {
+            background-color: #003366;
+        }
+
+        #solicitar-turno:hover {
+            background-color: rgb(6, 66, 130);
+        }
+
+        #cancelar-turno {
+            background-color: #650000;
+        }
+
+        #cancelar-turno:hover {
+            background-color: #6d0101;
+        }
+
+        .privacy-message {
+            color: white;
+            text-align: end;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        img {
+            margin-bottom: -70px;
+            width: 150px;
+            height: 100px;
+        }
+
+        footer {
+            background-color: rgb(0, 0, 152);
+            padding: 20px;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-left: 250px;
+        }
+
+        .footer-info {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .footer-logo img {
+            max-width: 150px;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer-address p {
+            margin: 5px 0;
+            line-height: 1.5;
+            color: white;
+            font-weight: bold;
+        }
+
+        .footer-address a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-address a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-social {
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .footer-social img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            
+        }
+
+        .footer-map {
+            flex: 1;
+            max-width: 45%;
+            margin-left: 20px;
+        }
+
+        .footer-map iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        .footer-social a i {
+            color: white; 
+            font-size: 24px;
+            margin: 0 10px; 
+            transition: color 0.3s ease; 
+        }
+
+        .footer-social a:hover i {
+            color: #ccc; 
+        }
+
+
+/* Responsive styles */
+@media (max-width: 800px) {
+    .top-bar .container, .navbar .container {
+        flex-direction: column; /* Coloca elementos en columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinea a la izquierda */
+    }
+
+    .nav-menu {
+        flex-direction: column; /* Coloca el menú en columna */
+        margin-top: 100px; /* Espacio superior */
+    }
+
+    .nav-menu li {
+        margin-right: 0; /* Sin margen a la derecha */
+        margin-bottom: 0px; /* Espacio inferior entre elementos */
+    }
+
+    .header-icons {
+        margin-top: 10px; /* Espacio superior para íconos */
+    }
+
+    .form-container {
+        padding: 10px; /* Reduce el padding para compactar más */
+        margin: 20px 0; /* Añade márgenes superior e inferior */
+        background-color: #31628F; /* Asegúrate de mantener el fondo visible */
+        border-radius: 10px; /* Mantiene el borde redondeado */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Añade sombra */
+    }
+
+   
+
+    .left-section,
+    .right-section {
+        width: 100%; /* Se expanden a 100% en pantallas pequeñas */
+        margin: 0; /* Sin margen */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select,
+    textarea {
+        padding: 6px; /* Reduce el padding de los campos aún más */
+        font-size: 12px; /* Tamaño de fuente más pequeño */
+        margin-bottom: 10px; /* Espacio inferior entre campos */
+    }
+
+    button {
+        min-width: 40%; /* Botones ocupan el ancho completo */
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+        padding: 8px; /* Ajusta padding para que se vea mejor */
+        border-radius: 5px; /* Mantiene el borde redondeado */
+    }
+}
+
+@media (max-width: 600px) {
+    .header-icons a {
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+
+    .top-bar .container {
+        flex-direction: column; /* Elementos en columna */
+        align-items: flex-end; /* Alinea a la derecha */
+    }
+
+    h1, h2 {
+        font-size: 18px; /* Ajusta tamaños de títulos */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Coloca elementos en columna */
+        align-items: center; /* Centra los elementos */
+        margin: 0; /* Elimina margen */
+        
+    }
+
+    .footer-info, .footer-map {
+        max-width: 100%; /* Ocupan el ancho completo */
+        margin-left: 0; /* Elimina margen */
+        text-align: center; /* Centra el texto */
+    }
+}
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="right-align">
+                    <div class="social-icons">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <p class="phone-number">📞 +(03564) 435402 / 431019</p>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+            <nav class="navbar">
+                <div class="container">
+                    <a href="#" class="logo"><img src="./img/Iso-negro-f-blanco_jpg.png" alt="UTN Logo"></a>
+                    <ul class="nav-menu">
+                        <li><a href="#">Inicio</a></li>
+                        <div class="vertical-line"></div>
+                        <li><a href="#">Biblioteca</a></li>
+                        <div class="vertical-line"></div>
+                        <li><a href="#">Eventos</a></li>
+                        <div class="vertical-line"></div>
+                        <li><a href="#">Servicios</a></li>
+                        <div class="vertical-line"></div>
+                        <li><a href="#">Novedades</a></li>
+                        <div class="vertical-line"></div>
+                        <li><a href="#" class="inline-text">Alumno-Investigador</a></li>
+                        <div class="vertical-line"></div>
+                        <li><a href="#" class="inline-text">Catalogo</a></li>
+                        <div class="vertical-line"></div>
+                    </ul>
+                    <div class="header-icons">
+                
+                        <a href="#"><i class="fas fa-user"></i></a>   <!-- Ícono de persona -->
+                        <div class="vertical-line"></div>
+                        <a href="#"><i class="fas fa-search"></i></a> <!-- Ícono de lupa -->
+                        
+
+
+                    </div>
+                </div>
+                
+            </nav>
+    </header>
+    
+    <div class="form-container">
+        <img src="./img/Captura de pantalla 2024-09-05 112516.png" alt="">
+        <h1>Solicitar turnos para atencion virtual o presencial</h1>
+        <h3>Complete el formulario de reserva de turnos para asistir de forma VIRTUAL o PRESENCIAL a nuestro establecimiento</h3>
+        <form id="solicitud-form">
+            <!-- Sección 1: Información sobre el área a solicitar turno -->
+            <fieldset>
+                <legend><h2>Información sobre el área a solicitar turno</h2></legend>
+                <div class="form-group">
+                    <div class="left-section">
+                        <label for="observaciones">Observaciones:</label>
+                        <textarea id="observaciones" name="observaciones" rows="4"></textarea>
+                    </div>
+                    <div class="right-section">
+                        <label for="fecha">Seleccione una fecha disponible:</label>
+                        <input type="date" id="fecha" name="fecha">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="left-section">
+                        <label for="horarios">Horarios disponibles:</label>
+                        <select id="horarios" name="horarios"></select>   
+                    </div>
+                    <div class="right-section">
+                        <label for="tipo-asistencia">Tipo de asistencia:</label>
+                        <select id="tipo-asistencia" name="tipo-asistencia">
+                            <option value="presencial">Presencial</option>
+                            <option value="virtual">Virtual</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="left-section">
+                        <label for="categoria-contacto">Categoría de contacto:</label>
+                        <input type="text" id="categoria-contacto" name="categoria-contacto">
+                    </div>
+                    <div class="right-section">
+                        <label for="carrera">Carrera:</label>
+                        <input type="text" id="carrera" name="carrera">
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Sección 2: Información de contacto -->
+            <fieldset>
+                <legend><h2>Información de contacto</h2></legend>
+                <div class="form-group">
+                    <div class="left-section">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+                    <div class="right-section">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="left-section">
+                        <label for="tipo-documento">Tipo de documento:</label>
+                        <select id="tipo-documento" name="tipo-documento">
+                            <option value="dni">DNI</option>
+                            <option value="pasaporte">Pasaporte</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="right-section">
+                        <label for="nro-documento">N° Documento:</label>
+                        <input type="text" id="nro-documento" name="nro-documento">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="left-section">
+                        <label for="localidad">Localidad:</label>
+                        <input type="text" id="localidad" name="localidad">
+                    </div>
+                    <div class="right-section">
+                        <label for="provincia">Provincia:</label>
+                        <input type="text" id="provincia" name="provincia">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="left-section">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="right-section">
+                        <label for="telefono">N° Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                </div>
+            </fieldset>
+
+    <div class="soli">
+                    <!-- Sección de disclaimers con recaptcha -->
+            <div class="disclaimer-section">
+                <div class="botonsitos">
+                   
+                </div>
+                <div class="center-text">
+                    <h6>(*) Datos Requeridos</h6>
+                </div>
+                <div class="right-text">
+                    <h6>(*) Para cancelar Turno, deberá tener el Código de seguridad de Inscripción que recibió en el correo electrónico.</h6>
+                </div>
+            </div>
+
+            <!-- Botones -->
+            <div class="buttons">
+                <button type="submit" id="solicitar-turno">Solicitar turno</button>
+                <button type="button" id="cancelar-turno">Cancelar turno</button>
+            </div>
+
+            <!-- Mensaje de privacidad -->
+            <p class="privacy-message">
+                Al enviar este formulario, acepto que el sistema "UTN Turnos" realizado para la UTN Facultad Regional San Francisco mantenga mis datos personales. 
+                Al mismo tiempo acepto que la Facultad Regional San Francisco mantenga los datos que crea conveniente, 
+                y la Facultad Regional San Francisco se compromete a resguardar los datos de forma segura y no distribuirlos a terceros.
+            </p>
+            </form>
+        </div>
+            
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <section class="footer-info">
+                <div class="footer-logo">
+                   <img src="./img/Captura de pantalla 2024-09-03 102545.png" alt=""> <!-- Aquí puedes añadir el logo si es necesario -->
+                </div>
+                <address class="footer-address">
+                    <p>
+                        Av. de la Universidad 501<br>
+                        (2400) San Francisco<br>
+                        Córdoba - República Argentina
+                    </p>
+                    <p>
+                        Tel. (03564) 435402 / 431019<br>
+                        <a href="mailto:facultad@sanfrancisco.utn.edu.ar">facultad@sanfrancisco.utn.edu.ar</a><br>
+                        <a href="https://www.sanfrancisco.utn.edu.ar" target="_blank">www.sanfrancisco.utn.edu.ar</a>
+                    </p>
+                </address>
+    
+                <!-- Iconos de redes sociales con Font Awesome -->
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="X"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </section>
+            <section class="footer-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1759.6494165493498!2d-62.1130809!3d-31.4207937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cb28503f73860f%3A0xa4607cc996083ed4!2sUTN%20Facultad%20Regional%20de%20San%20Francisco!5e0!3m2!1ses!2sar!4v1694572834627!5m2!1ses!2sar"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>

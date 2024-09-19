@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="busqueda.css">
+    <title>Catalogo</title>
+    <style>
+      
+
+
+
+/* Estilo responsivo */
+@media (max-width: 600px) {
+    .apply-filters {
+        width: calc(100% - 60px); /* Ancho completo menos márgenes */
+        top: 10px; /* Ajuste del espacio superior */
+        right: 10px; /* Ajuste del espacio derecho */
+        padding: 10px; /* Ajuste del padding */
+        font-size: 0.9em; /* Ajuste del tamaño de fuente */
+    }
+
+    .sidebar {
+        padding: 0px; /* Espaciado interno para la barra lateral */
+    }
+    
+            /* Estilo general para el contenedor */
+.container {
+    position: relative; /* Para posicionar elementos hijos en relación */
+    
+}
+
+
+
+}
+
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="right-align">
+                    <div class="social-icons">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <p class="phone-number">📞 +(03564) 435402 / 431019</p>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo"><img src="img/Iso-negro-f-blanco_jpg.png" alt="UTN Logo"></a>
+                <ul class="nav-menu">
+                    <li><a href="#">Inicio</a></li>
+                    <div class="vertical-line"></div>
+                    <li><a href="#">Biblioteca</a></li>
+                    <div class="vertical-line"></div>
+                    <li><a href="#">Eventos</a></li>
+                    <div class="vertical-line"></div>
+                    <li><a href="#">Servicios</a></li>
+                    <div class="vertical-line"></div>
+                    <li><a href="#">Novedades</a></li>
+                    <div class="vertical-line"></div>
+                    <li><a href="#" class="inline-text">Alumno-Investigador</a></li>
+                    <div class="vertical-line"></div>
+                    <li><a href="#" class="inline-text">Catalogo</a></li>
+                    <div class="vertical-line"></div>
+                </ul>
+                <div class="header-icons">
+                    <a href="#"><i class="fas fa-user"></i></a>   
+                    <div class="vertical-line"></div>
+                    <a href="#"><i class="fas fa-search"></i></a> 
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Buscar libros por título o autor...">
+    </div>
+
+    <div class="container">
+        <div class="filter-toggle" onclick="toggleFilters()">Filtros</div>
+        <div class="sidebar" id="filter-sidebar">
+            <h3>Filtros Generales</h3>
+            <div class="filter-group">
+                <h4 onclick="toggleFilter('materia-content')">CARRERAS:</h4>
+                <div id="materia-content" class="filter-content">
+                    <label><input type="checkbox" name="materia" value="Marketing"> Marketing</label>
+                    <label><input type="checkbox" name="materia" value="Direccion de negocios"> Direccion de negocios</label>
+                    <label><input type="checkbox" name="materia" value="Contador publico"> Contador publico</label>
+                    <label><input type="checkbox" name="materia" value="Recursos humanos"> Recursos humanos</label>
+                    <label><input type="checkbox" name="materia" value="Abogacia"> Abogacia</label>
+                    <label><input type="checkbox" name="materia" value="Psicologia"> Psicologia</label>
+                </div>
+            </div>
+            <button class="apply-filters">Aplicar Filtros</button>
+        </div>
+
+        <div class="content">
+            <div id="book-list" class="book-list">
+                <!-- Book items will be rendered here -->
+            </div>
+
+            <div class="pagination">
+                <button id="prev-btn">&lt; Anterior</button>
+                <div id="page-numbers" class="page-numbers"></div>
+                <button id="next-btn">Siguiente &gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <section class="footer-info">
+                <div class="footer-logo">
+                   <img src="./img/Captura de pantalla 2024-09-03 102545.png" alt="">
+                </div>
+                <address class="footer-address">
+                    <p>
+                        Av. de la Universidad 501<br>
+                        (2400) San Francisco<br>
+                        Córdoba - República Argentina
+                    </p>
+                    <p>
+                        Tel. (03564) 435402 / 431019<br>
+                        <a href="mailto:facultad@sanfrancisco.utn.edu.ar">facultad@sanfrancisco.utn.edu.ar</a><br>
+                        <a href="https://www.sanfrancisco.utn.edu.ar" target="_blank">www.sanfrancisco.utn.edu.ar</a>
+                    </p>
+                </address>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="X"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </section>
+            <section class="footer-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1759.6494165493498!2d-62.1130809!3d-31.4207937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95cb28503f73860f%3A0xa4607cc996083ed4!2sUTN%20Facultad%20Regional%20de%20San%20Francisco!5e0!3m2!1ses!2sar!4v1694572834627!5m2!1ses!2sar"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </section>
+        </div>
+    </footer>
+
+    <script>
+        let currentPage = 1;
+        const booksPerPage = 8;
+        const allBooks = [
+            { img: 'https://images-na.ssl-images-amazon.com/images/I/51Q9kQj6qBL._SX331_BO1,204,203,200_.jpg', title: 'Que Son Las Matematicas?', author: 'Courant Richard - Robbins Herbert' },
+            { img: 'https://images-na.ssl-images-amazon.com/images/I/51o823t-tEL._SX329_BO1,204,203,200_.jpg', title: 'Breve Historia De La Quimica', author: 'Isaac Asimov' },
+            { img: 'https://images-na.ssl-images-amazon.com/images/I/51%2B89i8x3L._SX348_BO1,204,203,200_.jpg', title: 'Conceptos De Fisica Moderna', author: 'Arthur Beiser' },
+            { img: 'https://images-na.ssl-images-amazon.com/images/I/51Z8Y1h%2B20L._SX331_BO1,204,203,200_.jpg', title: 'Acerca De La Enseñanza Del Derecho', author: 'Mauricio Rodriguez Ferrara' },
+            { img: 'https://images-na.ssl-images-amazon.com/images/I/41jO%2B7tR0NL._SX331_BO1,204,203,200_.jpg', title: 'Administración De Los Sistemas De Información', author: 'Effy Oz' },
+            { img: 'https://images-na.ssl-images-amazon.com/images/I/51%2BYnL8vBL._SX348_BO1,204,203,200_.jpg', title: 'Agronegocios', author: 'Manuel Alvaro Ledesma' },
+            // Add more books as needed
+        ];
+
+        let filteredBooks = [...allBooks];
+
+        function renderBooks(page, books) {
+            const start = (page - 1) * booksPerPage;
+            const end = start + booksPerPage;
+            const paginatedBooks = books.slice(start, end);
+            const bookList = document.getElementById('book-list');
+            bookList.innerHTML = '';
+            paginatedBooks.forEach(book => {
+                const bookElement = document.createElement('div');
+                bookElement.classList.add('book');
+                bookElement.innerHTML = `
+                    <img src="${book.img}" alt="${book.title}">
+                    <h4>${book.title}</h4>
+                    <p>${book.author}</p>
+                `;
+                bookList.appendChild(bookElement);
+            });
+            updatePageNumbers(books);
+            updatePaginationButtons(books.length);
+        }
+
+        function updatePaginationButtons(totalBooks) {
+            document.getElementById('prev-btn').disabled = currentPage === 1;
+            document.getElementById('next-btn').disabled = currentPage * booksPerPage >= totalBooks;
+        }
+
+        function updatePageNumbers(books) {
+            const pageNumbersContainer = document.getElementById('page-numbers');
+            const totalPages = Math.ceil(books.length / booksPerPage);
+            pageNumbersContainer.innerHTML = '';
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.innerText = i;
+                pageButton.classList.add('page-number');
+                if (i === currentPage) {
+                    pageButton.style.fontWeight = 'bold';
+                }
+                pageButton.addEventListener('click', () => {
+                    currentPage = i;
+                    renderBooks(currentPage, filteredBooks);
+                });
+                pageNumbersContainer.appendChild(pageButton);
+            }
+        }
+
+        function filterBooks(query) {
+            return allBooks.filter(book => 
+                book.title.toLowerCase().includes(query.toLowerCase()) ||
+                book.author.toLowerCase().includes(query.toLowerCase())
+            );
+        }
+
+        function handleSearch() {
+            const query = document.getElementById('search-input').value;
+            filteredBooks = filterBooks(query);
+            currentPage = 1;
+            renderBooks(currentPage, filteredBooks);
+        }
+
+        document.getElementById('search-input').addEventListener('input', handleSearch);
+
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderBooks(currentPage, filteredBooks);
+            }
+        });
+
+        document.getElementById('next-btn').addEventListener('click', () => {
+            if (currentPage * booksPerPage < filteredBooks.length) {
+                currentPage++;
+                renderBooks(currentPage, filteredBooks);
+            }
+        });
+
+        function toggleFilter(id) {
+            const content = document.getElementById(id);
+            const isVisible = content.style.display === 'block';
+            
+            const allContents = document.querySelectorAll('.sidebar .filter-content');
+            allContents.forEach(el => el.style.display = 'none');
+            
+            if (!isVisible) {
+                content.style.display = 'block';
+            }
+        }
+
+        function toggleFilters() {
+            const sidebar = document.getElementById('filter-sidebar');
+            const isVisible = sidebar.style.display === 'block';
+
+            if (isVisible) {
+                sidebar.style.display = 'none';
+            } else {
+                sidebar.style.display = 'block';
+            }
+        }
+
+        renderBooks(currentPage, filteredBooks);
+    </script>
+
+</body>
+</html>
