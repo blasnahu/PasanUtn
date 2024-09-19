@@ -1,0 +1,360 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    height: 100vh; /* Asegura que el body ocupe toda la altura */
+    display: flex;
+    flex-direction: column; /* Alineación vertical */
+}
+
+/* Barra superior */
+.top-bar {
+    background-color: #0d47a1;
+    color: white;
+    padding: 10px 0;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 100%; /* Asegúrate de que use todo el ancho disponible */
+}
+
+.right-align {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Este asegura que todo el contenido de .right-align esté a la derecha */
+}
+
+.phone-number {
+    margin: 0;
+    font-size: 16px;
+    margin-left: 15px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons i {
+    margin-left: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.social-icons i:first-of-type {
+    margin-left: 0;
+}
+
+.social-icons i:hover {
+    color: #fff;
+}
+
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header-icons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+.header-icons a:hover {
+    color: #0d47a1;
+}
+
+.header-icons .phone-number {
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 2px solid #ececec;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para el logo */
+.navbar .logo {
+    position: absolute;
+    left: 0;
+}
+
+.navbar .logo img {
+    height: 50px;
+    width: 150px;
+    margin-left: 200px;  /* Asegura que no haya margen */
+    padding-left: 0;  /* Elimina cualquier padding */
+}
+
+
+/* Contenedor general de la barra de navegación */
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 0; /* Elimina cualquier padding en el contenedor */
+}
+
+/* Estilos para el menú de navegación */
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Mantén el menú centrado */
+    flex-grow: 1;  /* El menú ocupará el espacio entre el logo y los íconos */
+}
+
+.nav-menu li {
+    margin-right: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.nav-menu a:hover {
+    color: #0d47a1;
+}
+
+/* Estilos para los íconos en la parte derecha */
+.header-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;  /* Mantén los íconos alineados a la derecha */
+}
+
+
+.vertical-line {
+    width: 1px;
+    height: 30px;
+    background-color: #333;
+    margin: 0 15px;
+}
+
+/* Ajuste del contenedor de la sección "Alumno-Investigador" */
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #00164e;
+    color: #000;
+}
+
+/* Sección Alumno-Investigador */
+.investigador-section {
+    background-color: #f0f8ff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.investigador-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.investigador-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.investigador-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.investigador-container p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.download-btn {
+    background-color: #00164e;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: #003399;
+}
+
+/* Sección de Ayuda */
+.ayuda-section {
+    padding: 40px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content-box {
+    background-color: #d1e7ff;
+    padding: 40px 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.content-box h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.content-box p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.button-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.descargar {
+    background-color: #00164e;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.descargar:hover {
+    background-color: #003399;
+}
+
+.whatsapp {
+    background-color: #d1e7ff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-left: 1100PX;
+}
+/* General Footer Styles */
+footer {
+    background-color: rgb(0, 0, 152);
+    padding: 20px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the Footer */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Section for Footer Information */
+.footer-info {
+    flex: 1;
+    max-width: 50%;
+}
+
+/* Footer Logo */
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Footer Address */
+.footer-address p {
+    margin: 5px 0;
+    line-height: 1.5;
+    color: white;
+    font-weight: bold;
+}
+
+.footer-address a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-address a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Social Icons */
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Section for Footer Map */
+.footer-map {
+    flex: 1;
+    max-width: 45%;
+    margin-left: 20px;
+}
+
+.footer-map iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+.footer-social a i {
+    color: white; /* Cambia el color de los iconos a blanco */
+    font-size: 24px; /* Ajusta el tamaño del ícono si lo deseas */
+    margin: 0 10px; /* Espacio entre los íconos */
+    transition: color 0.3s ease; /* Efecto suave al cambiar el color */
+}
+
+.footer-social a:hover i {
+    color: #ccc; /* Cambia a un color gris claro al hacer hover, opcional */
+}
+.inline-text {
+    display: inline;
+    white-space: nowrap;
+}
+    
+   
+    
+    .image img {
+        width: 250px;
+        border-radius: 8px;
+    }
+    

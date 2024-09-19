@@ -1,0 +1,46 @@
+
+
+.main-container {
+    margin-top: 30px;
+    display: flex;
+    background-color: #ffffff; /* Fondo blanco del contenedor */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px;
+    width: 80%; /* Ajustar según sea necesario */
+    max-width: 1200px; /* Ajustar según sea necesario */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un efecto de elevación */
+    margin-bottom: 30px;
+}
+
+.content {
+    width: 60%;
+    padding-right: 20px; /* Espacio entre el texto y la imagen */
+}
+
+.content h1 {
+    color: #0033cc; /* Color del título */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    color: #444444; /* Color del texto */
+    font-size: 18px; /* Tamaño de fuente mejorado */
+    line-height: 1.8; /* Mayor interlineado para mejor legibilidad */
+    font-family: 'Roboto', sans-serif; /* Fuente mejorada */
+    margin-bottom: 20px; /* Espacio inferior */
+    padding: 10px; /* Espacio interno */
+    border-left: 4px solid #0033cc; /* Borde izquierdo para estilo */
+    background-color: #f9f9f9; /* Color de fondo para el párrafo */
+    border-radius: 4px; /* Bordes redondeados del párrafo */
+}
+
+
+.image {
+    width: 40%;
+}
+
+.image img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+}

@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #002b7f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.investigador-section {
+    width: 80%;
+    background-color: #e7f1ff;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.investigador-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #002b7f;
+}
+
+.investigador-container h2 {
+    font-size: 1.5rem;
+    color: #002b7f;
+    margin-bottom: 20px;
+}
+
+.investigador-container p {
+    font-size: 1rem;
+    color: #333333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.download-btn {
+    background-color: #002b7f;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #0040ff;
+    border-color: #0040ff;
+}
