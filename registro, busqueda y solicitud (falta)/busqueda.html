@@ -4,11 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="stylesheet" href="busqueda.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="busqueda.css">
     <title>Catalogo</title>
+    <style>
+      
 
+
+
+/* Estilo responsivo */
+@media (max-width: 600px) {
+    .apply-filters {
+        width: calc(100% - 60px); /* Ancho completo menos márgenes */
+        top: 10px; /* Ajuste del espacio superior */
+        right: 10px; /* Ajuste del espacio derecho */
+        padding: 10px; /* Ajuste del padding */
+        font-size: 0.9em; /* Ajuste del tamaño de fuente */
+    }
+
+    .sidebar {
+        padding: 0px; /* Espaciado interno para la barra lateral */
+    }
+    
+            /* Estilo general para el contenedor */
+.container {
+    position: relative; /* Para posicionar elementos hijos en relación */
+    
+}
+
+
+
+}
+
+
+        
+    </style>
 </head>
 <body>
 
@@ -26,39 +56,32 @@
             </div>
         </div>
         
-        
-        
-            <nav class="navbar">
-                <div class="container">
-                    <a href="#" class="logo"><img src="img/Iso-negro-f-blanco_jpg.png" alt="UTN Logo"></a>
-                    <ul class="nav-menu">
-                        <li><a href="#">Inicio</a></li>
-                        <div class="vertical-line"></div>
-                        <li><a href="#">Biblioteca</a></li>
-                        <div class="vertical-line"></div>
-                        <li><a href="#">Eventos</a></li>
-                        <div class="vertical-line"></div>
-                        <li><a href="#">Servicios</a></li>
-                        <div class="vertical-line"></div>
-                        <li><a href="#">Novedades</a></li>
-                        <div class="vertical-line"></div>
-                        <li><a href="#" class="inline-text">Alumno-Investigador</a></li>
-                        <div class="vertical-line"></div>
-                        <li><a href="#" class="inline-text">Catalogo</a></li>
-                        <div class="vertical-line"></div>
-                    </ul>
-                    <div class="header-icons">
-                
-                        <a href="#"><i class="fas fa-user"></i></a>   <!-- Ícono de persona -->
-                        <div class="vertical-line"></div>
-                        <a href="#"><i class="fas fa-search"></i></a> <!-- Ícono de lupa -->
-                        
-
-
-                    </div>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo"><img src="img/Iso-negro-f-blanco_jpg.png" alt="UTN Logo"></a>
+                <ul class="nav-menu">
+                    <li><a href="#">Inicio</a></li>
+                    <div class="vertical-line"></div>
+                    <li><a href="#">Biblioteca</a></li>
+                    <div class="vertical-line"></div>
+                    <li><a href="#">Eventos</a></li>
+                    <div class="vertical-line"></div>
+                    <li><a href="#">Servicios</a></li>
+                    <div class="vertical-line"></div>
+                    <li><a href="#">Novedades</a></li>
+                    <div class="vertical-line"></div>
+                    <li><a href="#" class="inline-text">Alumno-Investigador</a></li>
+                    <div class="vertical-line"></div>
+                    <li><a href="#" class="inline-text">Catalogo</a></li>
+                    <div class="vertical-line"></div>
+                </ul>
+                <div class="header-icons">
+                    <a href="#"><i class="fas fa-user"></i></a>   
+                    <div class="vertical-line"></div>
+                    <a href="#"><i class="fas fa-search"></i></a> 
                 </div>
-                
-            </nav>
+            </div>
+        </nav>
     </header>
 
     <div class="search-container">
@@ -66,31 +89,24 @@
     </div>
 
     <div class="container">
-        <div class="sidebar">
-            <h3>Filtros Generales (me tienen que pasar bien los filtros de UCES ) </h3>
-
-<div class="filter-group">
-    <h4 onclick="toggleFilter('materia-content')">CARRERAS:</h4>
-    <div id="materia-content" class="filter-content">
-        <label><input type="checkbox" name="materia" value="Marketing"> Marketing</label>
-        <label><input type="checkbox" name="materia" value="Direccion de negocios"> Direccion de negocios</label>
-        <label><input type="checkbox" name="materia" value="Contador publico"> Contador publico</label>
-        <label><input type="checkbox" name="materia" value="Recursos humanos"> Recursos humanos</label>
-        <label><input type="checkbox" name="materia" value="Abogacia"> Abogacia</label>
-        <label><input type="checkbox" name="materia" value="Psicologia"> Psicologia</label>
-    </div>
-</div>
-
-
-
-
-
+        <div class="filter-toggle" onclick="toggleFilters()">Filtros</div>
+        <div class="sidebar" id="filter-sidebar">
+            <h3>Filtros Generales</h3>
+            <div class="filter-group">
+                <h4 onclick="toggleFilter('materia-content')">CARRERAS:</h4>
+                <div id="materia-content" class="filter-content">
+                    <label><input type="checkbox" name="materia" value="Marketing"> Marketing</label>
+                    <label><input type="checkbox" name="materia" value="Direccion de negocios"> Direccion de negocios</label>
+                    <label><input type="checkbox" name="materia" value="Contador publico"> Contador publico</label>
+                    <label><input type="checkbox" name="materia" value="Recursos humanos"> Recursos humanos</label>
+                    <label><input type="checkbox" name="materia" value="Abogacia"> Abogacia</label>
+                    <label><input type="checkbox" name="materia" value="Psicologia"> Psicologia</label>
+                </div>
+            </div>
             <button class="apply-filters">Aplicar Filtros</button>
         </div>
 
         <div class="content">
-            
-            
             <div id="book-list" class="book-list">
                 <!-- Book items will be rendered here -->
             </div>
@@ -107,7 +123,7 @@
         <div class="footer-container">
             <section class="footer-info">
                 <div class="footer-logo">
-                   <img src="./img/Captura de pantalla 2024-09-03 102545.png" alt=""> <!-- Aquí puedes añadir el logo si es necesario -->
+                   <img src="./img/Captura de pantalla 2024-09-03 102545.png" alt="">
                 </div>
                 <address class="footer-address">
                     <p>
@@ -121,8 +137,6 @@
                         <a href="https://www.sanfrancisco.utn.edu.ar" target="_blank">www.sanfrancisco.utn.edu.ar</a>
                     </p>
                 </address>
-    
-                <!-- Iconos de redes sociales con Font Awesome -->
                 <div class="footer-social">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -149,17 +163,6 @@
             { img: 'https://images-na.ssl-images-amazon.com/images/I/51Z8Y1h%2B20L._SX331_BO1,204,203,200_.jpg', title: 'Acerca De La Enseñanza Del Derecho', author: 'Mauricio Rodriguez Ferrara' },
             { img: 'https://images-na.ssl-images-amazon.com/images/I/41jO%2B7tR0NL._SX331_BO1,204,203,200_.jpg', title: 'Administración De Los Sistemas De Información', author: 'Effy Oz' },
             { img: 'https://images-na.ssl-images-amazon.com/images/I/51%2BYnL8vBL._SX348_BO1,204,203,200_.jpg', title: 'Agronegocios', author: 'Manuel Alvaro Ledesma' },
-            // Add more books as needed
-            { img: 'https://images-na.ssl-images-amazon.com/images/I/51Q9kQj6qBL._SX331_BO1,204,203,200_.jpg', title: 'Que Son Las Matematicas?', author: 'Courant Richard - Robbins Herbert' },
-            { img: 'https://images-na.ssl-images-amazon.com/images/I/51o823t-tEL._SX329_BO1,204,203,200_.jpg', title: 'Breve Historia De La Quimica', author: 'Isaac Asimov' },
-            { img: 'https://images-na.ssl-images-amazon.com/images/I/51%2B89i8x3L._SX348_BO1,204,203,200_.jpg', title: 'Conceptos De Fisica Moderna', author: 'Arthur Beiser' },
-           
-            // Add more books as needed
-            { img: 'https://images-na.ssl-images-amazon.com/images/I/51Q9kQj6qBL._SX331_BO1,204,203,200_.jpg', title: 'Que Son Las Matematicas?', author: 'Courant Richard - Robbins Herbert' },
-            { img: 'https://images-na.ssl-images-amazon.com/images/I/51o823t-tEL._SX329_BO1,204,203,200_.jpg', title: 'Breve Historia De La Quimica', author: 'Isaac Asimov' },
-            { img: 'https://images-na.ssl-images-amazon.com/images/I/51%2B89i8x3L._SX348_BO1,204,203,200_.jpg', title: 'Conceptos De Fisica Moderna', author: 'Arthur Beiser' },
-            { img: 'https://images-na.ssl-images-amazon.com/images/I/51Z8Y1h%2B20L._SX331_BO1,204,203,200_.jpg', title: 'Acerca De La Enseñanza Del Derecho', author: 'Mauricio Rodriguez Ferrara' },
-             { img: 'https://images-na.ssl-images-amazon.com/images/I/51%2BYnL8vBL._SX348_BO1,204,203,200_.jpg', title: 'Agronegocios', author: 'Manuel Alvaro Ledesma' },
             // Add more books as needed
         ];
 
@@ -210,11 +213,11 @@
         }
 
         function filterBooks(query) {
-    return allBooks.filter(book => 
-        book.title.toLowerCase().includes(query.toLowerCase()) ||
-        book.author.toLowerCase().includes(query.toLowerCase())
-    );
-}
+            return allBooks.filter(book => 
+                book.title.toLowerCase().includes(query.toLowerCase()) ||
+                book.author.toLowerCase().includes(query.toLowerCase())
+            );
+        }
 
         function handleSearch() {
             const query = document.getElementById('search-input').value;
@@ -240,25 +243,30 @@
         });
 
         function toggleFilter(id) {
-        const content = document.getElementById(id);
-        const isVisible = content.style.display === 'block';
-        
-        // Cerrar todos los filtros
-        const allContents = document.querySelectorAll('.sidebar .filter-content');
-        allContents.forEach(el => el.style.display = 'none');
-        
-        if (!isVisible) {
-            content.style.display = 'block';
+            const content = document.getElementById(id);
+            const isVisible = content.style.display === 'block';
+            
+            const allContents = document.querySelectorAll('.sidebar .filter-content');
+            allContents.forEach(el => el.style.display = 'none');
+            
+            if (!isVisible) {
+                content.style.display = 'block';
+            }
         }
-    }
-        
 
-        // Initialize with the first page of books
+        function toggleFilters() {
+            const sidebar = document.getElementById('filter-sidebar');
+            const isVisible = sidebar.style.display === 'block';
+
+            if (isVisible) {
+                sidebar.style.display = 'none';
+            } else {
+                sidebar.style.display = 'block';
+            }
+        }
+
         renderBooks(currentPage, filteredBooks);
-
-        
     </script>
-
 
 </body>
 </html>
