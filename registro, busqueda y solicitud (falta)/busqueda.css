@@ -1,0 +1,544 @@
+      /* Estilos generales */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    
+    /* Header icons */
+    .header-icons {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+    
+    .header-icons a {
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        margin-left: 30px;
+    }
+    
+    .header-icons a:hover {
+        color: #0d47a1;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Top bar */
+    .top-bar {
+        background-color: #0d47a1;
+        color: white;
+        padding: 10px 0;
+    }
+    
+    .top-bar .container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        margin-right: 0px;
+    }
+    
+    .right-align {
+        display: flex;
+        align-items: center;
+    }
+    
+    .phone-number {
+        margin: 0;
+        font-size: 16px;
+        margin-left: 15px;
+    }
+    
+    .social-icons {
+        display: flex;
+        align-items: center;
+    }
+    
+    .social-icons i {
+        margin-left: 15px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    
+    .social-icons i:first-of-type {
+        margin-left: 0;
+    }
+    
+    .social-icons i:hover {
+        color: #fff;
+    }
+    
+     /* Navbar */
+     .navbar {
+                background-color: #ffffff;
+                border-bottom: 2px solid #ececec;
+                padding: 15px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+    
+            
+    
+            header .navbar .container {
+                display: flex;
+                align-items: center; /* Alinea verticalmente los elementos dentro del contenedor */
+                justify-content: space-between; /* Distribuye el espacio entre los elementos del contenedor */
+            }
+    
+            .navbar .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+    
+            .navbar .logo {
+                position: absolute;
+                left: 0;
+                margin-bottom: 100px;
+            }
+            
+            .navbar .logo img {
+                height: 50px;
+                width: 150px;
+                margin-left: 100px;  /* Asegura que no haya margen */
+                padding-left: 0;  /* Elimina cualquier padding */
+                margin-top: 100px;
+            }
+            .nav-menu {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+            }
+    
+            .nav-menu li {
+                margin-right: 30px;
+            }
+    
+            .nav-menu a {
+                text-decoration: none;
+                color: #000;
+                font-weight: bold;
+            }
+    
+            .nav-menu a:hover {
+                color: #0d47a1;
+            }
+    /* Barra vertical */
+    .vertical-line {
+        width: 1px;
+        height: 30px;
+        background-color: #333;
+        margin: 0 15px;
+    }
+    
+    /* Estilo para el contenedor de los íconos */
+    .header-icons .vertical-line {
+        height: 20px;
+        margin: 0 15px;
+    }
+    
+            .book {
+                width: 287.83px;
+                height: 385.83px;
+                border-radius: 10px;
+                background-color: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+            }
+    
+            .book img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+    
+            .book .info {
+                position: absolute;
+                bottom: -50px; /* Adjust as needed to move the info outside the book container */
+                left: 0;
+                width: 100%;
+                padding: 10px;
+                background-color: #f9f9f9;
+                border-radius: 0 0 10px 10px;
+                box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+            }
+    
+            .book .info h4 {
+                margin: 5px 0;
+                font-size: 18px;
+                color: #333;
+            }
+    
+            .book .info p {
+                margin: 0;
+                font-size: 14px;
+                color: #777;
+            }
+    
+            .container {
+                display: flex;
+                justify-content: space-between;
+                margin: 20px auto;
+                max-width: 1200px;
+                padding: 0 20px;
+            }
+    
+            .sidebar {
+                width: 100%;
+                max-width: 280px;
+                padding: 20px;
+                margin-top: 160px;
+                border-radius: 12px;
+                background: #f4f4f4;
+                box-sizing: border-box;
+                position: absolute;
+                top: 90px;
+                left: 20px;
+                height: calc(100vh - 90px);
+                transition: all 0.3s ease;
+                z-index: 1;
+            }
+    
+            .sidebar h3 {
+                margin-top: 0;
+                font-size: 1.5em;
+                font-weight: bold;
+                color: #0080ff;
+                text-align: center;
+                letter-spacing: 1px;
+            }
+    
+            .sidebar h4 {
+                margin: 15px 0 10px;
+                font-size: 1.2em;
+                cursor: pointer;
+                color: #0056b3;
+                position: relative;
+            }
+    
+            .sidebar h4::after {
+                content: '+';
+                font-size: 1.1em;
+                position: absolute;
+                right: 0;
+                top: 0;
+                color: #007BFF;
+                transform: rotate(45deg);
+                transition: transform 0.3s ease;
+            }
+    
+            .sidebar .filter-group {
+                margin-bottom: 25px;
+            }
+    
+            .sidebar .filter-content {
+                display: none;
+                margin: 10px 0;
+                padding-left: 10px;
+                border-left: 3px solid #007BFF;
+                transition: all 0.3s ease;
+            }
+    
+            .sidebar .filter-content label {
+                display: block;
+                padding: 8px 5px;
+                font-size: 0.95em;
+                color: #333;
+                transition: background 0.2s ease;
+            }
+    
+            .sidebar .filter-content label:hover {
+                background-color: #e0e0e0;
+                border-radius: 4px;
+            }
+    
+            .sidebar input[type="checkbox"] {
+                margin-right: 12px;
+                accent-color: #007BFF;
+            }
+    
+            .sidebar .apply-filters {
+                display: block;
+                background-color: #007BFF;
+                color: white;
+                padding: 12px;
+                text-align: center;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-size: 1.1em;
+                margin-top: 20px;
+                transition: background-color 0.3s ease;
+            }
+    
+            .sidebar .apply-filters:hover {
+                background-color: #0056b3;
+            }
+    
+            .content {
+                flex: 1;
+                padding-left: 20px;
+            }
+    
+            .search-container {
+                margin-bottom: 20px;
+                background-color: white;
+            }
+    
+            #search-input {
+                width: 100%;
+                max-width: 1000px;
+                padding: 20px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                font-size: 16px;
+                transition: border-color 0.3s, box-shadow 0.3s;
+            }
+    
+            #search-input:focus {
+                border-color: #007BFF;
+                box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+                outline: none;
+            }
+    
+            .pagination {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+            }
+    
+            .pagination button {
+                background-color: #007BFF;
+                color: white;
+                border: 1px solid #007BFF;
+                padding: 10px 20px;
+                border-radius: 5px;
+                margin: 0 5px;
+                cursor: pointer;
+                font-size: 1em;
+                transition: background-color 0.2s, border-color 0.2s;
+            }
+    
+            .pagination button:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+    
+            .pagination .page-numbers {
+                margin: 0 10px;
+            }
+    
+            .pagination .page-number {
+                background-color: #ffffff;
+                border: 1px solid #007BFF;
+                color: #007BFF;
+                padding: 10px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1em;
+                transition: background-color 0.2s, color 0.2s;
+            }
+    
+            .pagination .page-number:hover {
+                background-color: #007BFF;
+                color: #ffffff;
+            }
+    
+            .pagination .page-number.active {
+                font-weight: bold;
+                background-color: #007BFF;
+                color: #ffffff;
+            }
+    
+            .book-list {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 50px;
+            }
+    
+         /* General Footer Styles */
+         footer {
+                background-color: rgb(0, 0, 152);
+                padding: 20px;
+                color: #333;
+                font-family: Arial, sans-serif;
+            }
+    
+            /* Container for the Footer */
+            .footer-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                margin-left: 250px;
+            }
+    
+            /* Section for Footer Information */
+            .footer-info {
+                flex: 1;
+                max-width: 50%;
+            }
+    
+            /* Footer Logo */
+            .footer-logo img {
+                max-width: 150px;
+                height: auto;
+                display: block;
+                margin-bottom: 10px;
+            }
+    
+    /* Footer Address */
+    .footer-address p {
+        margin: 5px 0;
+        line-height: 1.5;
+        color: white;
+        font-weight: bold;
+    }
+    
+    .footer-address a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .footer-address a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Footer Social Icons */
+    .footer-social {
+        margin-top: 20px;
+    }
+    
+    .footer-social a {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    
+    .footer-social img {
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+    }
+    
+    /* Section for Footer Map */
+    .footer-map {
+        flex: 1;
+        max-width: 45%;
+        margin-left: 20px;
+    }
+    
+    .footer-map iframe {
+        width: 100%;
+        height: 300px;
+        border: 0;
+    }
+    .footer-social a i {
+        color: white; /* Cambia el color de los iconos a blanco */
+        font-size: 24px; /* Ajusta el tamaño del ícono si lo deseas */
+        margin: 0 10px; /* Espacio entre los íconos */
+        transition: color 0.3s ease; /* Efecto suave al cambiar el color */
+    }
+    
+    .footer-social a:hover i {
+        color: #ccc; /* Cambia a un color gris claro al hacer hover, opcional */
+    }
+    
+            /* Media Queries */
+            @media (max-width: 1024px) {
+                .book-list {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+    
+            @media (max-width: 768px) {
+                .book-list {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+    
+                .sidebar {
+                    position: static;
+                    top: auto;
+                    left: auto;
+                    height: auto;
+                    display: none;
+                }
+    
+                .toggle-filters-btn {
+                    display: block;
+                }
+    
+                .container {
+                    flex-direction: column;
+                    padding: 0;
+                }
+    
+                .content {
+                    padding-left: 0;
+                }
+    
+                header {
+                    font-size: 1.2em;
+                }
+            }
+    
+            @media (max-width: 480px) {
+                .book {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 20px;
+                }
+    
+                .book img {
+                    height: auto;
+                }
+    
+                .book .info {
+                    height: auto;
+                    padding: 5px;
+                    bottom: -40px; /* Adjust as needed */
+                    font-size: 14px;
+                }
+    
+                .book .info h4 {
+                    font-size: 16px;
+                }
+    
+                .book .info p {
+                    font-size: 12px;
+                }
+    
+                .sidebar h3 {
+                    font-size: 1.2em;
+                }
+    
+                .sidebar h4 {
+                    font-size: 1em;
+                }
+    
+                .sidebar .apply-filters {
+                    font-size: 1em;
+                }
+    
+                .search-container {
+                    margin: 10px;
+                }
+    
+                #search-input {
+                    font-size: 14px;
+                }
+            }
