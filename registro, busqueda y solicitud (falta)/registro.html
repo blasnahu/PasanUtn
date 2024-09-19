@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTN Registro</title>
+
+    <style>
+        body {
+            background: radial-gradient(circle at center, #007bff, #003366);
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            text-align: left;
+            flex-wrap: wrap;
+            max-width: 800px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .container,
+        .extra-fields {
+            width: 48%;
+        }
+
+        h1, h2 {
+            color: #fff;
+            margin: 10px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            color: #fff;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 25px; /* Se incrementa el margen inferior para agregar más espacio */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #003366;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0754a7;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Responsive design for mobile devices */
+        @media (max-width: 600px) {
+            .container,
+            .extra-fields {
+                width: 100%;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            h1, h2 {
+                font-size: 18px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <img src="./img/Captura de pantalla 2024-09-03 102545.png" alt="UTN Logo">
+        <h2>REGISTRARSE</h2>
+        <div class="form-group">
+            <div class="container">
+                <form>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" name="dni" placeholder="DNI">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="username@gmail.com">
+
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo" name="sexo">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="extra-fields">
+                <form>
+                    <label for="provincia">Provincia:</label>
+                    <select id="provincia" name="provincia">
+                        <option value="noreste">Chaco</option>
+                        <option value="noroeste">Tucumán</option>
+                        <option value="cuyo">Mendoza</option>
+                        <option value="cuyo">Rioja</option>
+                        <option value="centro">Santa Fe</option>
+                        <option value="centro">Entre Ríos</option>
+                        <option value="centro">Córdoba</option>
+                        <option value="metropolitana">Buenos Aires</option>
+                        <option value="sur">Tierra del Fuego</option>
+                        <option value="sur">Santa Cruz</option>
+                        <option value="sur">Neuquén</option>
+                        <option value="sur">Chubut</option>
+                    </select>
+
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad">
+
+                    <label for="domicilio">Domicilio:</label>
+                    <input type="text" id="domicilio" name="domicilio" placeholder="Domicilio">
+
+                    <label for="nivel">Nivel:</label>
+                    <input type="text" id="nivel" name="nivel" placeholder="Nivel">
+
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña">
+                </form>
+            </div>
+        </div>
+        <button type="submit">INGRESAR</button>
+    </div>
+</body>
+</html>
